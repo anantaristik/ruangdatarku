@@ -99,6 +99,7 @@ export default function BangunRuangDetailPage({ data }: Props) {
                 <Image
                   src={item.gambar}
                   alt={item.nama}
+                  width={96} height={96}
                   className="w-full h-50 object-scale-down justify-center items-center"
                 />
                 <div className="p-3 text-center">
@@ -112,14 +113,14 @@ export default function BangunRuangDetailPage({ data }: Props) {
 
         <section className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl font-semibold text-secondary mb-4">Ilustrasi {data.nama}</h2>
-          <Image src={data.gambar} alt={`Gambar ${data.nama}`} className="mx-auto w-60 sm:w-80" />
+          <Image src={data.gambar} alt={`Gambar ${data.nama}`} width={96} height={96} className="mx-auto w-60 sm:w-80" />
         </section>
 
         <section className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl font-semibold text-secondary mb-4">Jaring-Jaring {data.nama}</h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             {data.jaringJaring.map((img, i) => (
-              <Image key={i} src={img} alt={`Jaring ${data.nama} ${i + 1}`} className="w-64 rounded shadow" />
+              <Image key={i} src={img} width={96} height={96} alt={`Jaring ${data.nama} ${i + 1}`} className="w-64 rounded shadow" />
             ))}
           </div>
         </section>
@@ -165,6 +166,7 @@ export default function BangunRuangDetailPage({ data }: Props) {
                   <Image
                     src={item.gambar}
                     alt={item.nama}
+                    width={96} height={96}
                     className="w-full h-32 object-contain bg-gray-50 p-2"
                   />
                   <div className="p-3 text-center">

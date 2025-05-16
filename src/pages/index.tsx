@@ -93,7 +93,7 @@ export default function Home() {
         {bangunRuangList.map((item) => (
             <Link href={`/ruang/${item.slug}`} key={item.slug}>
               <div className="p-4 border rounded hover:shadow h-full">
-                <Image src={item.gambar} alt={item.nama} className="w-24 h-24 object-contain mx-auto" />
+                <Image src={item.gambar} alt={item.nama} className="w-24 h-24 object-contain mx-auto" width={96} height={96} />
                 <h3 className="text-lg font-bold mt-2 text-center">{item.nama}</h3>
                 <p className="text-sm text-gray-600 text-center">{item.deskripsi}</p>
                 <div className="items-center p-2 justify-center mt-5 text-center text-sm bg-primary text-white rounded hover:bg-primary/90">
