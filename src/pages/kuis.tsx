@@ -1,5 +1,6 @@
 "use client";
-import Quiz from '@/components/kuis';
+
+import Quiz from '@/components/Kuis';
 import Navbar from '@/components/Navbar';
 import React, { useState } from 'react';
 import { FaPlay } from "react-icons/fa";

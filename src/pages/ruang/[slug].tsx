@@ -6,6 +6,7 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import KuisInteraktif from "@/components/KuisInteraktifComp";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
+import Image from "next/image";
 
 
 type Props = {
@@ -95,7 +96,7 @@ export default function BangunRuangDetailPage({ data }: Props) {
                 key={index}
                 className="bg-white border rounded-lg shadow hover:shadow-md transition overflow-hidden"
               >
-                <img
+                <Image
                   src={item.gambar}
                   alt={item.nama}
                   className="w-full h-50 object-scale-down justify-center items-center"
@@ -111,14 +112,14 @@ export default function BangunRuangDetailPage({ data }: Props) {
 
         <section className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl font-semibold text-secondary mb-4">Ilustrasi {data.nama}</h2>
-          <img src={data.gambar} alt={`Gambar ${data.nama}`} className="mx-auto w-60 sm:w-80" />
+          <Image src={data.gambar} alt={`Gambar ${data.nama}`} className="mx-auto w-60 sm:w-80" />
         </section>
 
         <section className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl font-semibold text-secondary mb-4">Jaring-Jaring {data.nama}</h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             {data.jaringJaring.map((img, i) => (
-              <img key={i} src={img} alt={`Jaring ${data.nama} ${i + 1}`} className="w-64 rounded shadow" />
+              <Image key={i} src={img} alt={`Jaring ${data.nama} ${i + 1}`} className="w-64 rounded shadow" />
             ))}
           </div>
         </section>
@@ -161,7 +162,7 @@ export default function BangunRuangDetailPage({ data }: Props) {
             .map((item, i) => (
               <Link key={i} href={`/ruang/${item.slug}`} className="group">
                 <div className="border rounded-lg overflow-hidden shadow hover:shadow-md bg-white transition">
-                  <img
+                  <Image
                     src={item.gambar}
                     alt={item.nama}
                     className="w-full h-32 object-contain bg-gray-50 p-2"

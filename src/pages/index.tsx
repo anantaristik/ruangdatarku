@@ -1,8 +1,8 @@
-import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import { Poppins } from "next/font/google";
 import Cube3D from "@/components/Cube3D";
 import Link from "next/link";
+import Image from "next/image";
 
 const poppins = Poppins({
   weight: ["400", "600", "700"],
@@ -64,12 +64,16 @@ export default function Home() {
                 Platform belajar interaktif untuk memahami konsep bangun datar dan bangun ruang secara menyenangkan dan visual. Cocok untuk siswa SD, guru, dan orang tua.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="/ruang" className="px-6 py-3 bg-accent text-black rounded shadow hover:bg-yellow-500 text-center">
-                  Mulai Belajar
-                </a>
-                <a href="/kuis" className="px-6 py-3 border-accent border rounded text-accent hover:bg-accent hover:text-white hover:border-white text-center">
-                  Coba Kuis
-                </a>
+                <Link href="/ruang">
+                  <div className="px-6 py-3 bg-accent text-black rounded shadow hover:bg-yellow-500 text-center">
+                    Mulai Belajar
+                  </div>
+                </Link>
+                <Link href='/kuis'>
+                  <div className="px-6 py-3 border-accent border rounded text-accent hover:bg-accent hover:text-white hover:border-white text-center">
+                    Coba Kuis
+                  </div>
+                </Link>
               </div>
             </div>
             <Cube3D />
@@ -89,7 +93,7 @@ export default function Home() {
         {bangunRuangList.map((item) => (
             <Link href={`/ruang/${item.slug}`} key={item.slug}>
               <div className="p-4 border rounded hover:shadow h-full">
-                <img src={item.gambar} alt={item.nama} className="w-24 h-24 object-contain mx-auto" />
+                <Image src={item.gambar} alt={item.nama} className="w-24 h-24 object-contain mx-auto" />
                 <h3 className="text-lg font-bold mt-2 text-center">{item.nama}</h3>
                 <p className="text-sm text-gray-600 text-center">{item.deskripsi}</p>
                 <div className="items-center p-2 justify-center mt-5 text-center text-sm bg-primary text-white rounded hover:bg-primary/90">

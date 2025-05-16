@@ -1,9 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import Abstrak3D from "@/components/Abstrak3D";
-
 
 export default function NotFoundPage() {
   return (

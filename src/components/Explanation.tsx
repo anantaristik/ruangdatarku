@@ -1,4 +1,3 @@
-import { quizData } from '@/data/QuizData';
 import React from 'react';
 
 interface ExplanationProps {

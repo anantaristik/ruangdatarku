@@ -50,19 +50,8 @@ function RotatingCube({ isUserInteracting }: { isUserInteracting: boolean }) {
 
 
 export default function Cube3D() {
-  const size = 4.5;
   const [isUserInteracting, setIsUserInteracting] = useState(false);
 
-  const points = [
-    [-size, -size, -size],
-    [-size, -size, size],
-    [-size, size, -size],
-    [-size, size, size],
-    [size, -size, -size],
-    [size, -size, size],
-    [size, size, -size],
-    [size, size, size],
-  ];
 
   return (
     <div className="w-[400px] h-[400px] sm:w-[600px] sm:h-[500px]">
