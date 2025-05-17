@@ -54,7 +54,7 @@ export default function Cube3D() {
 
 
   return (
-    <div className="w-[400px] h-[400px] sm:w-[600px] sm:h-[500px]">
+    <div className="lg:w-[400px] lg:h-[400px] md:w-[400px] md:h-[500px] sm:w-[300px] sm:h-[500px]">
       <Canvas
         camera={{ position: [9, 9, 9], near: 0.1, far: 1000 }}
         style={{ background: "transparent" }}

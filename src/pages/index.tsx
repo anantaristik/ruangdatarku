@@ -54,10 +54,10 @@ export default function Home() {
     <div className={`${poppins.className} min-h-screen pt-20 flex flex-col`}>
       <Navbar />
       <main className="flex flex-col">
-        <div className="flex flex-col flex-1 items-center justify-center gap-10 p-5 sm:p-20 bg-primary text-gray-900">
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:px-20">
-            <div className="flex flex-col gap-10">
-              <h1 className="text-5xl sm:text-5xl text-white font-bold">
+        <div className="flex flex-col flex-1 items-center justify-center gap-10 p-6 sm:p-10 bg-primary text-gray-900">
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-10">
+            <div className="flex flex-col gap-10 w-full p-6 sm:p-15">
+              <h1 className="text-4xl lg:text-5xl text-white font-bold">
                 Belajar Geometri Menyenangkan
               </h1>
               <p className="max-w-l text-l sm:text-md text-white">

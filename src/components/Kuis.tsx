@@ -56,7 +56,7 @@ const Quiz: React.FC = () => {
   return (
     <div className={`min-h-screen pt-20 flex flex-col`}>
       <div
-        className="container flex justify-center items-center bg-white py-32 rounded-lg shadow-lg min-h-[800px] mt-16"
+        className="container flex justify-center items-center bg-white rounded-lg shadow-lg min-h-[800px] min-w-full"
         style={{
           backgroundImage: 'linear-gradient(rgba(0, 0, 255, 0.5), rgba(106, 90, 205, 0.5))',
           backgroundSize: 'cover',
@@ -67,7 +67,7 @@ const Quiz: React.FC = () => {
 
         {quizFinished ? (
           <div className="flex flex-col items-center w-full">
-            <div className="flex flex-col items-center text-center bg-white py-10 rounded-lg shadow-lg lg:w-3/4 w-full">
+            <div className="flex flex-col items-center text-center bg-white py-10 rounded-lg shadow-lg w-full">
               <p className="absolute -translate-y-16 bg-green-600 text-white text-2xl font-bold lg:w-1/4 w-1/2 rounded-md py-2">
                 Kuis selesai!
               </p>
@@ -117,8 +117,8 @@ const Quiz: React.FC = () => {
             </div>
           </div>
         ) : (
-          <div className="flex flex-col items-center w-full">
-            <div className="flex flex-col items-center text-center bg-white py-10 rounded-lg shadow-lg lg:w-3/4 w-full">
+          <div className="flex flex-col items-center py-6 px-10 w-full">
+            <div className="flex flex-col items-center text-center bg-white py-10 rounded-lg shadow-lg w-full">
               <p className="absolute -translate-y-16 text-primary bg-accent text-lg font-bold lg:w-1/4 w-1/2 rounded-md py-2">
                 Soal {currentQuestion + 1} dari {totalQuestions}
               </p>

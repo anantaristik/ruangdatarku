@@ -118,7 +118,7 @@ export default function BangunRuangDetailPage({ data }: Props) {
 
         <section className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl font-semibold text-secondary mb-4">Jaring-Jaring {data.nama}</h2>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             {data.jaringJaring.map((img, i) => (
               <Image key={i} src={img} width={96} height={96} alt={`Jaring ${data.nama} ${i + 1}`} className="w-64 rounded shadow" />
             ))}
